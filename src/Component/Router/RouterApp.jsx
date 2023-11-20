@@ -1,12 +1,15 @@
 import React from 'react'
+import Header from './Components/Header/Header'
+import Footer from './Components/Footer/Footer'
+import Home from './Components/Home/Home'
 
 function RouterApp() {
   return (
-    <div>
-      hello i am bhavesh zalke 
-      <br />
-      from katri       
-    </div>
+    <>
+    {/* <Header/> */}
+    <Home/>
+    <Footer/>
+    </>
   )
 }
 
