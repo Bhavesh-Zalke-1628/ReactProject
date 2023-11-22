@@ -13,4 +13,3 @@ export const TheamProvider = TheamContext.Provider
 export default function useTheam() {
     return useContext(TheamContext)
 }
-console.log(useTheam)
