@@ -9,7 +9,8 @@ import About from './Component/Router/Components/About/About.jsx'
 import Contact from './Component/Router/Components/Contact/Contact.jsx'
 import User from './Component/Router/Components/User/User.jsx'
 import Github, { githubInfoLoader } from './Component/Router/Components/Github/Github.jsx'
-
+import { Provider } from 'react-redux'
+import { store } from './Component/Redux/App/Store.js'
 // const router = createBrowserRouter([
 //   {
 //     path: '',
@@ -48,9 +49,9 @@ import Github, { githubInfoLoader } from './Component/Router/Components/Github/G
 // )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    {/* <RouterProvider router={router} /> */}
-  <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
 
 )

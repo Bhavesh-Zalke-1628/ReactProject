@@ -1,8 +1,11 @@
 import React from 'react'
+import AddTodo from './Components/AddTodo'
+import Todos from './Components/Todos'
 function ReduxApp() {
     return (
         <div>
-            <h1 className='w-full bg-gray-700 py-4 text-4xl text-center text-yellow-200'>This is the redux toolkit video</h1>
+            <AddTodo/>
+            <Todos/>
         </div>
     )
 }
