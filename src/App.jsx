@@ -8,10 +8,11 @@ import RouterApp from './Component/Router/RouterApp.jsx'
 import ContextApp from './Component/ContextApi/ContextApp.jsx'
 import TheamApp from './Component/TheamSwitecher/TheamApp.jsx'
 import TodoApp from './Component/Todo/TodoApp.jsx'
+import ReduxApp from './Component/Redux/ReduxApp.jsx'
 function App() {
   return (
     <>
-      <TodoApp />
+    <ReduxApp/>
     </>
   )
 }
