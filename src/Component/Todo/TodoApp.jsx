@@ -51,7 +51,6 @@ function TodoApp() {
                             <div key={todo.id}
                                 className='w-full'>
                                 <TodoItem todo={todo} />
-
                             </div>
                         ))}
                     </div>

@@ -12,7 +12,7 @@ import ReduxApp from './Component/Redux/ReduxApp.jsx'
 function App() {
   return (
     <>
-    <ReduxApp/>
+      <PassApp />
     </>
   )
 }
