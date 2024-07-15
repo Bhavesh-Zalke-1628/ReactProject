@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { TodoProvider } from './context/TodoContext'
 import { useEffect } from 'react'
 import TodoForm from './Component/TodoForm'
+import TodoItem from './Component/TodoItem'
 
 function TodoApp() {
     const [todos, setTodos] = useState([])
@@ -21,9 +22,8 @@ function TodoApp() {
         setTodos((prev) => prev.map((preveTodo) => preveTodo === id ? { ...preveTodo, completed: !preveTodo.completed } : preveTodo))
     }
 
+    console.log(todos)
 
-    //  localStorage
-    // localStroge getitem function 
     useEffect(() => {
         const todos = JSON.parse(localStorage.getItem('todos'))
 
