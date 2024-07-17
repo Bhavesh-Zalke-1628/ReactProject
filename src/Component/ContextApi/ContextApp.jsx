@@ -5,11 +5,13 @@ import Profile from './Component/Profile'
 
 function ContextApp() {
   return (
-    <UserContextProvider>
-      <Login/>
-      <Profile/>
-    </UserContextProvider>
-    )
+    <div className=' bg-white'>
+      <UserContextProvider>
+        <Login />
+        <Profile />
+      </UserContextProvider>
+    </div>
+  )
 }
 
 export default ContextApp
