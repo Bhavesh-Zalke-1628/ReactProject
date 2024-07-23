@@ -1,32 +1,51 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 function BgApp() {
     const [color, setColor] = useState('')
     return (
-        <div className='w-full h-screen duration-200' style={{ backgroundColor: color }}>
-
-            <div className='fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2'>
-                <div
-                    className='flex flex-wrap justify-center gap-2 shadow-xl bg-white
-                 rounded-lg px-3 py-2'>
-                    <button
-                    onClick={() =>{
-                        setColor('red')
-                    }}
-                    className='outline-none shadow-lg px-4 py-2 text-xl text-white rounded-xl' style={{ backgroundColor: "red" }}>Red</button>
-                    <button 
-                    onClick={() =>{
-                        setColor('yellow')
-                    }}  className='outline-none shadow-lg px-4 py-2 text-xl text-white rounded-xl' style={{ backgroundColor: "yellow" }}>yellow</button>
-                    <button 
-                    onClick={() =>{
-                        setColor('pink')
-                    }} className='outline-none shadow-lg px-4 py-2 text-xl text-white rounded-xl' style={{ backgroundColor: "pink" }}>pink</button>
-                    <button 
-                    onClick={() =>{
-                        setColor('green')
-                    }} className='outline-none shadow-lg px-4 py-2 text-xl text-white rounded-xl' style={{ backgroundColor: "green" }}>green</button>
-                </div>
+        <div className=' w-screen h-screen relative  px-72 text-white' style={{ backgroundColor: color ? color : 'red' }}>
+            <div className=' absolute bottom-5 bg-yellow-100 rounded-lg self-center w-fit px-5 h-14 py-2'>
+                <button
+                    className=' px-5 py-2 self-center uppercase mr-3 font-semibold text-lg rounded-xl' style={{ backgroundColor: 'red' }}
+                    onClick={() => setColor('red')}
+                >
+                    red
+                </button>
+                <button
+                    className=' px-5 py-2 self-center uppercase mr-3 font-semibold text-lg rounded-xl' style={{ backgroundColor: 'yellow' }}
+                    onClick={() => setColor('yellow')}
+                >
+                    yellow
+                </button>
+                <button
+                    className=' px-5 py-2 self-center uppercase mr-3 font-semibold text-lg rounded-xl' style={{ backgroundColor: 'green' }}
+                    onClick={() => setColor('green')}
+                >
+                    green
+                </button>
+                <button
+                    className=' px-5 py-2 self-center uppercase mr-3 font-semibold text-lg rounded-xl' style={{ backgroundColor: 'pink' }}
+                    onClick={() => setColor('pink')}
+                >
+                    pink
+                </button>
+                <button
+                    className=' px-5 py-2 self-center uppercase mr-3 font-semibold text-lg rounded-xl' style={{ backgroundColor: 'purple' }}
+                    onClick={() => setColor('purple')}
+                >
+                    purple
+                </button>
+                <button
+                    className=' px-5 py-2 self-center uppercase mr-3 font-semibold text-lg rounded-xl' style={{ backgroundColor: 'cyan' }}
+                    onClick={() => setColor('cyan')}
+                >
+                    cyan
+                </button>
+                <button
+                    className=' px-5 py-2 self-center uppercase mr-3 font-semibold text-lg rounded-xl' style={{ backgroundColor: 'blue' }}
+                    onClick={() => setColor('blue')}
+                >
+                    blue
+                </button>
             </div>
         </div>
     )

@@ -9,10 +9,11 @@ import ContextApp from './Component/ContextApi/ContextApp.jsx'
 import TheamApp from './Component/TheamSwitecher/TheamApp.jsx'
 import TodoApp from './Component/Todo/TodoApp.jsx'
 import ReduxApp from './Component/Redux/ReduxApp.jsx'
+import Counter from './Component/Counter/Counter.jsx'
 function App() {
   return (
     <>
-      <TheamApp />
+      <Bgapp />
     </>
   )
 }
