@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card({chanel,obj ="visit me"}) {
+function Card({ obj = "visit me", chanel = 'bhavesh' }) {
     return (
         <div className="relative h-[400px] w-[300px] rounded-md">
             <img
