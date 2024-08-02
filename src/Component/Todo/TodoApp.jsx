@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
-import { TodoProvider } from './context/TodoContext'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
+
+import { TodoProvider } from './Context'
 import TodoForm from './Component/TodoForm'
 import TodoItem from './Component/TodoItem'
 
-function TodoApp() {
+function App() {
     const [todos, setTodos] = useState([])
+
     const addTodo = (todo) => {
         setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev])
     }
 
     const updateTodo = (id, todo) => {
         setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo)))
+
+
     }
 
     const deleteTodo = (id) => {
@@ -19,22 +22,29 @@ function TodoApp() {
     }
 
     const toggleComplete = (id) => {
-        setTodos((prev) => prev.map((preveTodo) => preveTodo === id ? { ...preveTodo, completed: !preveTodo.completed } : preveTodo))
+        //console.log(id);
+        setTodos((prev) =>
+            prev.map((prevTodo) =>
+                prevTodo.id === id ? {
+                    ...prevTodo,
+                    completed: !prevTodo.completed
+                } : prevTodo))
     }
 
     console.log(todos)
-
     useEffect(() => {
-        const todos = JSON.parse(localStorage.getItem('todos'))
-
-        if (todos && todos.length > 0) {
+        const todos = JSON.parse(localStorage.getItem("todos"))
+        if (todos && todos.length >= 0) {
             setTodos(todos)
         }
-    }, []);
+    }, [])
 
     useEffect(() => {
-        localStorage.setItem('todos', JSON.stringify(todos))
+        localStorage.setItem("todos", JSON.stringify(todos))
     }, [todos])
+
+
+
 
     return (
         <TodoProvider value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}>
@@ -49,7 +59,8 @@ function TodoApp() {
                         {/*Loop and Add TodoItem here */}
                         {todos.map((todo) => (
                             <div key={todo.id}
-                                className='w-full'>
+                                className='w-full'
+                            >
                                 <TodoItem todo={todo} />
                             </div>
                         ))}
@@ -60,4 +71,4 @@ function TodoApp() {
     )
 }
 
-export default TodoApp
+export default App

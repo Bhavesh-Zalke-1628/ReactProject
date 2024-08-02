@@ -15,6 +15,7 @@ export const todoSlice = createSlice({
                 id: nanoid(),
                 text: action.payload
             }
+            if (!action.payload) return alert('enter data')
             state.todos.push(todo)
         },
         removeTodo: (state, action) => {

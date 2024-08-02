@@ -13,7 +13,7 @@ import Counter from './Component/Counter/Counter.jsx'
 function App() {
   return (
     <>
-      <Card />
+      <TodoApp />
     </>
   )
 }
